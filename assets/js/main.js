@@ -9,7 +9,7 @@ icon.onclick = function(){
         mysong.pause();
         icon.src = "assets/img/play.png"; 
     } 
-}; 
+};
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxSmcwgAdOpNi9amAbQMQDmHZAZkVtsNC4f2P7e82HutU5x6fS6DeNmZJ5R-_YvXzh9xA/exec'
 const form = document.forms['wpp-template']
