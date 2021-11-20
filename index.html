@@ -129,26 +129,27 @@
             </div>
         </div>
     </section>
-    <section class="content-galery-image">
-        <div class="container content-galery">
-            <h1 class="heading-tittle">galery photo</h1>
-            <div class="row" style="margin-bottom: 30px;">
-                <div class="col-md-4"><img src="assets/img/slider-intro.jpg" width="100%"></div>
-                <div class="col-md-4"><img src="assets/img/slider%202.jpeg" width="100%"></div>
-                <div class="col-md-4"><img src="assets/img/slider-cover.jpg" width="100%"></div>
-            </div>
-            <div class="row" style="margin-bottom: 30px;">
-                <div class="col-md-4"><img src="assets/img/slider-intro.jpg" width="100%"></div>
-                <div class="col-md-4"><img src="assets/img/slider%202.jpeg" width="100%"></div>
-                <div class="col-md-4"><img src="assets/img/slider-cover.jpg" width="100%"></div>
-            </div>
-            <div>
-                <img class="footer-image" src="assets/img/purana-divider.png">
-            </div>
-        </div>
-    </section>
-
     
+<section class="content-galery-image">
+    <div class="container content-galery">
+        <h1 class="heading-tittle">galery photo</h1>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-4"><img src="assets/img/slider-intro.jpg" width="100%"></div>
+            <div class="col-md-4"><img src="assets/img/slider%202.jpeg" width="100%"></div>
+            <div class="col-md-4"><img src="assets/img/slider-cover.jpg" width="100%"></div>
+        </div>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-4"><img src="assets/img/slider-intro.jpg" width="100%"></div>
+            <div class="col-md-4"><img src="assets/img/slider%202.jpeg" width="100%"></div>
+            <div class="col-md-4"><img src="assets/img/slider-cover.jpg" width="100%"></div>
+        </div>
+        <div>
+            <img class="footer-image" src="assets/img/purana-divider.png">
+        </div>
+    </div>
+</section>
+
+    <!--  -->
 <section id="guest-book">
     <div class="container guest-container">
         <div class="text-center heading-guest">
@@ -160,7 +161,7 @@
         </div>
         <div class="row guest-book-form">
             <div class="col-sm-12 col-md-6 input-book">
-                <form class="input-book" method="POST" name="wpp-template">
+                <form id="myform" class="input-book" method="POST" name="wpp-template">
                     <div class="text-start name-guest-form">
                         <label class="form-label">Nama</label>
                         <input name="nama" class="form-control name-guest-input" type="text" placeholder="Masukan Nama Anda Disini" required/>
@@ -208,13 +209,10 @@
     </div>
 </section>
 
+<script src="assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="assets/js/apps.js"></script>
-<script src="assets/js/main.js"></script>
 </body>
-
 </html>
