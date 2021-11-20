@@ -153,20 +153,28 @@
     <div class="container guest-container">
         <div class="text-center heading-guest">
             <h1 class="heading-tittle">Buku Tamu<br /></h1>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                <strong>Notify :</strong> Pesan ucapan sudah kami terima, makasih
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         </div>
         <div class="row guest-book-form">
             <div class="col-sm-12 col-md-6 input-book">
-                <form class="input-book" method="POST">
+                <form class="input-book" method="POST" name="wpp-template">
                     <div class="text-start name-guest-form">
                         <label class="form-label">Nama</label>
-                        <input name="data[nama]" class="form-control name-guest-input" type="text" placeholder="Masukan Nama Anda Disini" />
+                        <input name="nama" class="form-control name-guest-input" type="text" placeholder="Masukan Nama Anda Disini" required/>
                     </div>
                     <div class="commant-guest-form">
                         <label class="form-label">Masukan Ucapan dan doa terbaik</label>
-                        <textarea name="data[komen]" class="form-control commant-guest-input" placeholder="Berikan Ucapan dan doa restu pasangan pengantin"></textarea>
+                        <textarea name="komentar" class="form-control commant-guest-input" placeholder="Berikan Ucapan dan doa restu pasangan pengantin" required></textarea>
                     </div>
                     <div class="text-sm-center text-md-start btn-submit-guest">
-                        <button class="btn btn-link-active" type="submit">kirim</button>
+                        <button class="btn btn-link-active btn-kirim" type="submit">kirim</button>
+                        <button class="btn btn-link-active btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
                     </div>
                 </form>
             </div>
@@ -219,6 +227,31 @@
             } 
         }
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxSmcwgAdOpNi9amAbQMQDmHZAZkVtsNC4f2P7e82HutU5x6fS6DeNmZJ5R-_YvXzh9xA/exec'
+        const form = document.forms['wpp-template']
+        const btnKirim = document.querySelector('.btn-kirim')
+        const btnLoading = document.querySelector('.btn-loading')
+        const myAlert = document.querySelector('.my-alert')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                console.log('Success!', response)
+                btnLoading.classList.toggle('d-none');
+                btnKirim.classList.toggle('d-none');
+                myAlert.classList.toggle('d-none');
+                
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>
