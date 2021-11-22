@@ -3,6 +3,37 @@ div .container {
   height: 100%;
 }
 
+:root {
+  --primary: #dcb276;
+  --text: #ffff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disppear{
+  animation: vanish 1s forwards;
+}
+@keyframes vanish {
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .heading-tittle {
   color: var(--primary);
   font-family: 'Dancing Script';
@@ -13,10 +44,6 @@ div .container {
   padding-bottom: 40px;
 }
 
-:root {
-  --primary: #dcb276;
-  --text: #ffff;
-}
 
 .footer-image {
   width: 20%;
