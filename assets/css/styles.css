@@ -336,3 +336,40 @@ li {
   text-transform: capitalize;
   text-align: left;
 }
+
+/* modal-hero */
+/* modal section */
+
+.modal-body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("background-active.jpg") center / 120px repeat;
+  overflow: hidden;
+}
+
+.img-right {
+  position: absolute;
+  bottom: 8px;
+  right: 0%;
+  font-size: 18px;
+}
+
+.img-left {
+  position: absolute;
+  top: 8px;
+  left: 0%;
+  font-size: 18px;
+}
+
+.hero-wellcome {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
