@@ -376,6 +376,17 @@ li {
   border-style: none;
 }
 
+.btn-link-active-modal:hover{
+  background: var(--primary);
+  color: var(--text);
+  width: 250px;
+  height: 40px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 30px;
+  border-style: none;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
