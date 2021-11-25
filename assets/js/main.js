@@ -39,10 +39,3 @@ var x = setInterval(function() {
     document.getElementById("Seconds").innerHTML = "- -";
   }
 }, 1000);
-
-// modal-hero
-var myModal = new bootstrap.Modal(document.getElementById("modal-hero"), {});
-
-document.onreadystatechange = function () {
-  myModal.show();
-};
