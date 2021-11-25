@@ -365,6 +365,16 @@ li {
   font-size: 18px;
 }
 
+.btn-link-active-modal{
+  background: var(--primary);
+  color: var(--text);
+  width: 250px;
+  height: 40px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
