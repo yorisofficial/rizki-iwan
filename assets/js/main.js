@@ -40,27 +40,9 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// buku tamu
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxSmcwgAdOpNi9amAbQMQDmHZAZkVtsNC4f2P7e82HutU5x6fS6DeNmZJ5R-_YvXzh9xA/exec'
-const form = document.forms['wpp-template']
-const btnKirim = document.querySelector('.btn-kirim')
-const btnLoading = document.querySelector('.btn-loading')
-const myAlert = document.querySelector('.my-alert')
+// modal-hero
+var myModal = new bootstrap.Modal(document.getElementById("modal-hero"), {});
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-
-    btnLoading.classList.toggle('d-none');
-    btnKirim.classList.toggle('d-none');
-
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        console.log('Success!', response)
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        myAlert.classList.toggle('d-none');
-        
-        form.reset();
-    })
-    .catch(error => console.error('Error!', error.message))
-})
+document.onreadystatechange = function () {
+  myModal.show();
+};
