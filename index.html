@@ -32,7 +32,7 @@
                         <div class="col-12">
                             <h5 style="font-family: Poppins, sans-serif;color: var(--text);">Undangan Pernikahan</h5>
                             <h1 style="font-family: 'Dancing Script', serif;color: var(--primary);">Andrea &amp; Julia</h1>
-                            <button class="btn btn-link-active-modal" type="button" data-bs-dismiss="modal">Buka Undangan</button>
+                            <button class="btn btn-link-active-modal" type="button" data-bs-dismiss="modal">Buka-Undangan</button>
                         </div>
                     </div>
                 </div>
@@ -241,6 +241,11 @@
 
 <script>
     AOS.init();
+    var myModal = new bootstrap.Modal(document.getElementById("modal-hero"), {});
+
+    document.onreadystatechange = function () {
+    myModal.show();
+    };
 </script>
 <script src="assets/js/loader.js" charset="utf-8"></script>
 </body>
