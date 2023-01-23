@@ -13,7 +13,7 @@ icon.onclick = function(){
 };
 
 // count-down
-var countDownDate = new Date("1 1, 2022 13:54:00").getTime();
+var countDownDate = new Date("1 2, 2023 13:54:00").getTime();
 
 var x = setInterval(function() {
 
