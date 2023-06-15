@@ -1,6 +1,4 @@
-window.onload = function () {
-  toggleMusic();
-};
+
 
 function toggleMusic() {
   var mysong = document.getElementById("mysong");
