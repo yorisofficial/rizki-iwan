@@ -1,25 +1,16 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const mysong = document.getElementById("mysong");
-  const icon = document.getElementById("icon");
-  const playButton = document.getElementById("playButton");
+// music togle
+var mysong = document.getElementById("mysong");
+var icon = document.getElementById("icon");
 
-  playButton.onclick = () => {
+icon.onclick = function () {
+  if (mysong.paused) {
     mysong.play();
     icon.src = "assets/img/pause.png";
-    playButton.style.display = "none";
-  };
-
-  icon.onclick = () => {
-    if (mysong.paused) {
-      mysong.play();
-      icon.src = "assets/img/pause.png";
-    } else {
-      mysong.pause();
-      icon.src = "assets/img/play.png";
-    }
-  };
-});
-
+  } else {
+    mysong.pause();
+    icon.src = "assets/img/play.png";
+  }
+};
 
 
 
