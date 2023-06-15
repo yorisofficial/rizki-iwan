@@ -54,3 +54,9 @@ var x = setInterval(function () {
     document.getElementById("Seconds").innerHTML = "- -";
   }
 }, 1000);
+
+// Maps direction
+function redirectToLocation() {
+  var url = "https://maps.google.com/maps/dir//Jl.+Bojong+Galing+Kabupaten+Sukabumi+Jawa+Barat/@-6.8245753,106.7171828,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e682d649a9649ed:0x413b88c059d5677a";
+  window.open(url, "_blank");
+}
