@@ -212,16 +212,18 @@ i {
   .icon-text{
     font-size: 30px;
   }
-
   .detail-acara{
-    padding: 0px 10px 0px 10px;
-    display: block;
+    justify-content: center;
+    align-items: start;
   }
 }
 
-.detail-acara{
-  padding: 0px 10px 0px 10px;
-  display: flex;
+@media (min-width: 770px) {
+  .detail-acara{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
 }
 
 .content-event-wedding {
