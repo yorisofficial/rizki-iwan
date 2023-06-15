@@ -8,6 +8,7 @@ div .container {
   --text: #ffff;
 }
 
+
 *{
   margin: 0;
   padding: 0;
@@ -179,19 +180,6 @@ i {
   font-size: 30px;
 }
 
-.text-icon {
-  color: var(--primary);
-  font-size: 20px;
-}
-
-
-.icon-text{
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  font-size: 60px;
-}
-
 .content-text{
   margin: 0px 20px;
   display: grid;
@@ -203,6 +191,20 @@ i {
 /* End Navbar Style */
 
 /* Page Section Event */
+
+.icon-text{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 60px;
+}
+
+@media (max-width: 768px) {
+  .icon-text{
+    font-size: 30px;
+  }
+}
+
 .detail-acara{
   padding: 0px 10px 0px 10px;
   display: flex;
