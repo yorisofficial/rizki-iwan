@@ -1,3 +1,20 @@
+window.onload = function () {
+  toggleMusic();
+};
+
+function toggleMusic() {
+  var mysong = document.getElementById("mysong");
+  var icon = document.getElementById("icon");
+
+  if (mysong.paused) {
+    mysong.play();
+    icon.src = "assets/img/pause.png";
+  } else {
+    mysong.pause();
+    icon.src = "assets/img/play.png";
+  }
+}
+
 // music togle
 var mysong = document.getElementById("mysong");
 var icon = document.getElementById("icon");
@@ -11,6 +28,7 @@ icon.onclick = function () {
     icon.src = "assets/img/play.png";
   }
 };
+
 
 
 
