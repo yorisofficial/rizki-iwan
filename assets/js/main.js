@@ -1,21 +1,31 @@
-// music togle
-var mysong = document.getElementById("mysong");
-var icon = document.getElementById("icon");
+window.addEventListener('DOMContentLoaded', (event) => {
+  var mysong = document.getElementById("mysong");
+  var icon = document.getElementById("icon");
+  var playButton = document.getElementById("playButton");
 
-icon.onclick = function(){
-    if (mysong.paused){
-        mysong.play();
-        icon.src = "assets/img/pause.png";
-    }else{
-        mysong.pause();
-        icon.src = "assets/img/play.png"; 
-    } 
-};
+  playButton.onclick = function () {
+    mysong.play();
+    icon.src = "assets/img/pause.png";
+    playButton.style.display = "none";
+  };
+
+  icon.onclick = function () {
+    if (mysong.paused) {
+      mysong.play();
+      icon.src = "assets/img/pause.png";
+    } else {
+      mysong.pause();
+      icon.src = "assets/img/play.png";
+    }
+  };
+});
+
+
 
 // count-down
-var countDownDate = new Date("1 2, 2023 13:54:00").getTime();
+var countDownDate = new Date("6 31, 2023 13:54:00").getTime();
 
-var x = setInterval(function() {
+var x = setInterval(function () {
 
   var now = new Date().getTime();
 
@@ -30,7 +40,7 @@ var x = setInterval(function() {
   document.getElementById("Hours").innerHTML = hours + "h ";
   document.getElementById("Minutes").innerHTML = minutes + "m ";
   document.getElementById("Seconds").innerHTML = seconds + "s ";
-  
+
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("Days").innerHTML = "- -";
