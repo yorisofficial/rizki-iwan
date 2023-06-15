@@ -182,6 +182,12 @@ i {
 /* End Navbar Style */
 
 /* Page Section Event */
+.detail-acara{
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 
 .content-event-wedding {
   background: linear-gradient(0deg, black, rgba(255,255,255,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
