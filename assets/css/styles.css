@@ -45,6 +45,15 @@ div .container {
   padding-bottom: 40px;
 }
 
+.m-heading{
+  color: var(--primary);
+  font-family: 'Dancing Script';
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
 .sub-heading{
   color: var(--primary);
   font-weight: 600;
