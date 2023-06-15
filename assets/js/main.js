@@ -1,15 +1,15 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-  var mysong = document.getElementById("mysong");
-  var icon = document.getElementById("icon");
-  var playButton = document.getElementById("playButton");
+window.addEventListener('DOMContentLoaded', () => {
+  const mysong = document.getElementById("mysong");
+  const icon = document.getElementById("icon");
+  const playButton = document.getElementById("playButton");
 
-  playButton.onclick = function () {
+  playButton.onclick = () => {
     mysong.play();
     icon.src = "assets/img/pause.png";
     playButton.style.display = "none";
   };
 
-  icon.onclick = function () {
+  icon.onclick = () => {
     if (mysong.paused) {
       mysong.play();
       icon.src = "assets/img/pause.png";
@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   };
 });
+
 
 
 
