@@ -44,6 +44,11 @@ div .container {
   padding-bottom: 40px;
 }
 
+.sub-heading{
+  color: var(--primary);
+  font-weight: 600;
+}
+
 
 .footer-image {
   width: 20%;
@@ -179,6 +184,21 @@ i {
   font-size: 20px;
 }
 
+.icon-text{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 60px;
+}
+
+.content-text{
+  margin: 0px 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* End Navbar Style */
 
 /* Page Section Event */
@@ -210,8 +230,6 @@ i {
 }
 
 .col-list-event p {
-  margin-top: 20px;
-  margin-bottom: 20px;
   text-transform: capitalize;
   color: var(--primary);
 }
