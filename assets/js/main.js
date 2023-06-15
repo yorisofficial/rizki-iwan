@@ -1,5 +1,4 @@
-
-
+// Music sound
 function toggleMusic() {
   var mysong = document.getElementById("mysong");
   var icon = document.getElementById("icon");
@@ -28,10 +27,8 @@ icon.onclick = function () {
 };
 
 
-
-
 // count-down
-var countDownDate = new Date("6 31, 2023 13:54:00").getTime();
+var countDownDate = new Date("7 2, 2023 13:54:00").getTime();
 
 var x = setInterval(function () {
 

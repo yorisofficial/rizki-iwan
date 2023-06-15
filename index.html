@@ -2,11 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script>
-            window.onload = function () {
-                toggleMusic();
-            };
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
@@ -35,7 +30,7 @@
                                 <img src="assets/img/prokess-img.png" width="100px" />
                             </div> -->
                             <div class="col">
-                                <button id="playButton" class="btn btn-link-active-modal" type="button" data-bs-dismiss="modal">Buka Undangan</button>
+                                <button id="playButton" class="btn btn-link-active-modal" type="button" data-bs-dismiss="modal" onclick="toggleMusic()">Buka Undangan</button>
                             </div>
                         </div>
                     </div>
@@ -210,6 +205,7 @@
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
+
             AOS.init();
             var myModal = new bootstrap.Modal(document.getElementById("modal-hero"), {});
 
