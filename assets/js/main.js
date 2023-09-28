@@ -28,14 +28,12 @@ icon.onclick = function () {
 
 
 // count-down
-var countDownDate = new Date("7 2, 2023 13:54:00").getTime();
+var countDownDate = new Date("12 2, 2023 13:54:00").getTime();
 
 var x = setInterval(function () {
 
   var now = new Date().getTime();
-
   var distance = countDownDate - now;
-
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
